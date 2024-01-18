@@ -10,7 +10,7 @@ export const useFetchData = (url) => {
     const getData = async () => {
       try {
         setPending(true);
-        const { data } = await axios("https://dummyjson.com/quotes");
+        const { data } = await axios(url);
         setPending(false);
         setData(data.quotes);
       } catch (error) {

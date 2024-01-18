@@ -1,7 +1,7 @@
 import { useFetchData } from "./hooks/customHook";
 
 function App() {
-  const { data, pending, error } = useFetchData();
+  const { data, pending, error } = useFetchData("https://dummyjson.com/quotes");
   return (
     <div>
       {error && <div>{error}</div>}
